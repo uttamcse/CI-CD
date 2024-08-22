@@ -1,0 +1,22 @@
+pipeline {
+    agent any
+
+    stages {
+        stage('Build') {
+            steps {
+                script {
+                    // Run build commands if necessary, e.g., npm install
+                    sh 'echo "Building website..."'
+                }
+            }
+        }
+        stage('Deploy') {
+            steps {
+                script {
+                    // Deploy files, possibly using scp or a plugin
+                    sh 'echo "Deploying website..."'
+                }
+            }
+        }
+    }
+}
